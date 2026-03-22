@@ -1,0 +1,543 @@
+/* ============================================
+   BELLI VAISHALI — RESUME STYLESHEET
+   Font: Poppins | Palette: Navy · Teal · White
+   ============================================ */
+
+/* ── Google Font Import ── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ──────────────────────────────────────────
+   1. CSS VARIABLES (Color Palette)
+   Navy #1B2A4A | Teal #2A9D8F | White #F8F9FA
+────────────────────────────────────────── */
+:root {
+  --navy:        #1B2A4A;
+  --navy-light:  #253660;
+  --teal:        #2A9D8F;
+  --teal-light:  #3bbcad;
+  --white:       #F8F9FA;
+  --off-white:   #EEF1F5;
+  --text-dark:   #1a1a2e;
+  --text-mid:    #4a5568;
+  --text-light:  #8492a6;
+  --border:      #d8e0ed;
+  --shadow:      rgba(27, 42, 74, 0.12);
+}
+
+/* ──────────────────────────────────────────
+   2. RESET & BASE
+────────────────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.75;
+  background-color: var(--off-white);
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--teal-light);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ──────────────────────────────────────────
+   3. NAVIGATION BAR
+────────────────────────────────────────── */
+.navbar {
+  background-color: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+.navbar .nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .nav-logo {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+.navbar .nav-logo span {
+  color: var(--teal);
+}
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar .nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar .nav-links a:hover {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+/* ──────────────────────────────────────────
+   4. PAGE WRAPPER
+────────────────────────────────────────── */
+.page-wrapper {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ──────────────────────────────────────────
+   5. HERO / PROFILE HEADER CARD
+────────────────────────────────────────── */
+.profile-card {
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 48px 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 8px 32px var(--shadow);
+}
+
+.profile-card .avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--white);
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+.profile-card .profile-info h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.profile-card .profile-info .designation {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+.profile-card .profile-info .tagline {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 4px;
+}
+
+.profile-card .profile-contact {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.profile-card .profile-contact .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.profile-card .profile-contact .contact-item .icon {
+  font-size: 15px;
+}
+
+/* ──────────────────────────────────────────
+   6. TWO-COLUMN LAYOUT
+────────────────────────────────────────── */
+.two-col-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.col-left  { flex: 0 0 320px; display: flex; flex-direction: column; gap: 28px; }
+.col-right { flex: 1;          display: flex; flex-direction: column; gap: 28px; }
+
+/* ──────────────────────────────────────────
+   7. SECTION CARD (reusable)
+────────────────────────────────────────── */
+.section-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 28px 30px;
+  box-shadow: 0 2px 16px var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.section-card .section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--teal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ──────────────────────────────────────────
+   8. ABOUT SECTION
+────────────────────────────────────────── */
+.about-text {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+/* ──────────────────────────────────────────
+   9. SKILLS & HOBBIES — TAG CHIPS
+────────────────────────────────────────── */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: var(--off-white);
+  color: var(--navy);
+  border: 1px solid var(--border);
+  transition: background 0.2s, color 0.2s;
+}
+
+.tag:hover {
+  background-color: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+}
+
+.tag.highlight {
+  background-color: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+/* ──────────────────────────────────────────
+   10. CONTACT LIST
+────────────────────────────────────────── */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13.5px;
+  color: var(--text-mid);
+}
+
+.contact-list .contact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--off-white);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+/* ──────────────────────────────────────────
+   11. LANGUAGES
+────────────────────────────────────────── */
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.lang-bar {
+  width: 120px;
+  height: 6px;
+  background: var(--off-white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lang-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, var(--teal), var(--teal-light));
+}
+
+/* ──────────────────────────────────────────
+   12. EDUCATION CARDS
+────────────────────────────────────────── */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edu-card {
+  background: var(--off-white);
+  border-radius: 12px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--teal);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  transition: box-shadow 0.2s;
+}
+
+.edu-card:hover {
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.edu-card.featured {
+  background: var(--navy);
+  border-left-color: var(--teal);
+}
+
+.edu-card.featured .edu-school { color: var(--white); }
+.edu-card.featured .edu-degree { color: var(--teal);  }
+.edu-card.featured .edu-meta   { color: rgba(255,255,255,0.5); }
+
+.edu-card .edu-school {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.edu-card .edu-degree {
+  font-size: 13px;
+  color: var(--teal);
+  margin-top: 3px;
+}
+
+.edu-card .edu-meta {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-card .edu-badge {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--teal);
+  color: var(--white);
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+/* ──────────────────────────────────────────
+   13. ACHIEVEMENT ITEMS
+────────────────────────────────────────── */
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.achievement-item {
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--off-white);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.achievement-item:hover {
+  border-color: var(--teal);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.achievement-item .ach-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--navy);
+  color: var(--teal);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.achievement-item .ach-content .ach-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.achievement-item .ach-content .ach-desc {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+
+/* ──────────────────────────────────────────
+   14. INTERESTS PILLS
+────────────────────────────────────────── */
+.interest-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.interest-pill {
+  padding: 7px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--off-white);
+  border: 2px solid var(--teal);
+  color: var(--teal);
+  transition: background 0.2s, color 0.2s;
+}
+
+.interest-pill:hover {
+  background: var(--teal);
+  color: var(--white);
+}
+
+/* ──────────────────────────────────────────
+   15. FOOTER
+────────────────────────────────────────── */
+footer {
+  background: var(--navy);
+  border-radius: 14px;
+  padding: 24px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .footer-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+footer .footer-note {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.5px;
+}
+
+footer .footer-teal {
+  color: var(--teal);
+  font-weight: 500;
+}
+
+/* ──────────────────────────────────────────
+   16. RESPONSIVE — Mobile ≤ 768px
+────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .profile-card .profile-contact {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .two-col-layout {
+    flex-direction: column;
+  }
+
+  .col-left {
+    flex: none;
+    width: 100%;
+  }
+
+  .navbar .nav-links {
+    gap: 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
